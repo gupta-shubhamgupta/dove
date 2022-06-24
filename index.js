@@ -24,8 +24,8 @@ window.onload=function(){
    
     document.getElementById("fname").innerHTML=message[0];
    document.getElementById("sname").innerHTML=message[1];
-   document.getElementById("mheader").innerHTML=`${message[2]} has sent you a secret message and a beautiful song`;
-   document.getElementById("msg").innerHTML=msg;
+   document.getElementById("mheader").innerHTML=`${message[0]} has sent you a secret message and a beautiful song`;
+   document.getElementById("msg").innerHTML=message[2];
    
 }
 function spliting(unsplited,key) {
