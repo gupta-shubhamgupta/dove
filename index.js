@@ -2,7 +2,7 @@ window.onload=function(){
 	
 	
     
-   
+   console.log("shubham");
    var inp=window.location.href;
    
    
