@@ -6,6 +6,7 @@ window.onload=function(){
    
    
    var finaluri =spliting(inp,'?')[1];
+	console.log("fin "+finaluri);
    var decryptToken = CryptoJS.AES.decrypt(finaluri,'#').toString(CryptoJS.enc.Utf8);
    var message = decryptToken.split("!SpC!");
    console.log(message[0]);
