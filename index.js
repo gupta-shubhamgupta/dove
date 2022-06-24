@@ -6,6 +6,11 @@ window.onload=function(){
    
    
    var finaluri =spliting(inp,'?')[1];
+   var decryptToken = CryptoJS.AES.decrypt(finaluri,'#').toString(CryptoJS.enc.Utf8);
+   var message = decryptToken.split("!SpC!");
+   console.log(message[0]);
+   console.log(message[1]);
+   console.log(message[2]);
    var decodedArr = finaluri.split("%2F");
    let utf8decoder = new TextDecoder();
    let u8arr = new Uint8Array(decodedArr);
@@ -16,9 +21,9 @@ window.onload=function(){
     var msg = values[5];
    
    
-    document.getElementById("fname").innerHTML=fname;
-   document.getElementById("sname").innerHTML=sname;
-   document.getElementById("mheader").innerHTML=`${fname} has sent you a secret message and a beautiful song`;
+    document.getElementById("fname").innerHTML=message[0];
+   document.getElementById("sname").innerHTML=message[1];
+   document.getElementById("mheader").innerHTML=`${message[2]} has sent you a secret message and a beautiful song`;
    document.getElementById("msg").innerHTML=msg;
    
 }
