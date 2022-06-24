@@ -2,23 +2,16 @@ window.onload=function(){
 	
 	
     
-   console.log("shubham");
    var inp=window.location.href;
    
    
    var finaluri =spliting(inp,'?')[1];
-	console.log("fin "+finaluri);
    var decodedArr = finaluri.split("%2F");
-   console.log("dec "+decodedArr);
    let utf8decoder = new TextDecoder();
    let u8arr = new Uint8Array(decodedArr);
-	 console.log("u8 "+u8arr);
    var done=utf8decoder.decode(u8arr);
-console.log("do "+done);
    var values=spliting(done,'#|#');
-    console.log("va "+values);
     var fname = values[1];
-	console.log("new "+fname);
     var sname = values[3];
     var msg = values[5];
    
