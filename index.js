@@ -16,6 +16,7 @@ window.onload=function(){
    var values=spliting(done,'#|#');
     
     var fname = values[1];
+	console.log("new "+fname);
     var sname = values[3];
     var msg = values[5];
    
