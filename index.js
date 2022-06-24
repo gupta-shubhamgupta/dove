@@ -9,9 +9,10 @@ window.onload=function(){
    var finaluri =spliting(inp,'?')[1];
 	console.log("fin "+finaluri);
    var decodedArr = finaluri.split("%2F");
-   
+   console.log("dec "+decodedArr);
    let utf8decoder = new TextDecoder();
    let u8arr = new Uint8Array(decodedArr);
+	 console.log("u8 "+u8arr);
    var done=utf8decoder.decode(u8arr);
 console.log("do "+done);
    var values=spliting(done,'#|#');
