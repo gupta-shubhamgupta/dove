@@ -6,12 +6,8 @@ window.onload=function(){
    
    
    var finaluri =spliting(inp,'?')[1];
-	console.log("fin "+finaluri);
    var decryptToken = CryptoJS.AES.decrypt(finaluri,'#').toString(CryptoJS.enc.Utf8);
    var message = decryptToken.split("!SpC!");
-   console.log(message[0]);
-   console.log(message[1]);
-   console.log(message[2]);
    var decodedArr = finaluri.split("%2F");
    let utf8decoder = new TextDecoder();
    let u8arr = new Uint8Array(decodedArr);
